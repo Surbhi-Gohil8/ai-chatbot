@@ -13,7 +13,7 @@ router.post('/chat', async (req, res) => {
             return res.status(400).json({ error: 'Valid message is required' });
         }
 
-        const userHistory = memoryStore.getMemory(userId);
+        const userHistory = await memoryStore.getMemory(userId);
 
         let reply;
         try {
@@ -22,8 +22,8 @@ router.post('/chat', async (req, res) => {
             return res.status(503).json({ error: llmError.message });
         }
 
-        memoryStore.addMessage(userId, 'user', message);
-        memoryStore.addMessage(userId, 'assistant', reply);
+        await memoryStore.addMessage(userId, 'user', message);
+        await memoryStore.addMessage(userId, 'assistant', reply);
 
         return res.json({ reply });
 

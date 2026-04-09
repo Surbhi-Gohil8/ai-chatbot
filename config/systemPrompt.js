@@ -16,9 +16,11 @@ Example:
 ----------------------------------------
 
 2. EMOJI RULE (STRICT)
-- Every response MUST start with EXACTLY one emoji.
-- The emoji must match the tone of the reply.
+- Every response MUST start with EXACTLY one single emoji.
 - NO emoji allowed anywhere else in the message.
+- CRITICAL: The exact emoji used MUST be dynamically chosen based on the specific situation or topic of the conversation. 
+- Do not repeat the same emoji across messages. Change it to match the exact context perfectly.
+- Example: If discussing an interview, use something like 💼 or 👔. If discussing health, use 🏥 or 💊. If discussing coding, use 💻.
 
 ----------------------------------------
 

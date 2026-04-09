@@ -1,24 +1,55 @@
+const fs = require('fs').promises;
+const path = require('path');
+
 const MAX_HISTORY = 50;
-const store = new Map();
+const MEMORY_FILE = path.join(__dirname, 'longTermMemory.json');
 
-function getMemory(userId) {
-    if (!store.has(userId)) {
-        store.set(userId, []);
-    }
-    return store.get(userId);
-}
-
-function addMessage(userId, role, content) {
-    const history = getMemory(userId);
-    history.push({ role, content });
-
-    if (history.length > MAX_HISTORY) {
-        history.splice(0, history.length - MAX_HISTORY);
+async function initStore() {
+    try {
+        await fs.access(MEMORY_FILE);
+    } catch {
+        await fs.writeFile(MEMORY_FILE, JSON.stringify({}));
     }
 }
+async function getStoreData() {
+    await initStore();
+    const data = await fs.readFile(MEMORY_FILE, 'utf-8');
+    return JSON.parse(data);
+}   
+async function saveStoreData(data) {
+    await fs.writeFile(MEMORY_FILE, JSON.stringify(data, null, 2));
+}
 
-function clearMemory(userId) {
-    store.delete(userId);
+async function getMemory(userId) {
+    const store = await getStoreData();
+    if (!store[userId]) {
+        store[userId] = [];
+        await saveStoreData(store);
+    }
+    return store[userId];
+}
+
+async function addMessage(userId, role, content) {
+    const store = await getStoreData();
+    if (!store[userId]) {
+        store[userId] = [];
+    }
+    
+    store[userId].push({ role, content });
+
+    if (store[userId].length > MAX_HISTORY) {
+        store[userId].splice(0, store[userId].length - MAX_HISTORY);
+    }
+    
+    await saveStoreData(store);
+}
+
+async function clearMemory(userId) {
+    const store = await getStoreData();
+    if (store[userId]) {
+        delete store[userId];
+        await saveStoreData(store);
+    }
 }
 
 module.exports = {
