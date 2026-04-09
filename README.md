@@ -1,39 +1,62 @@
 # Personality-Driven Career Chatbot
 
-This project is a backend-only Node.js application that provides an API for a personality-driven chatbot. The chatbot delivers high-quality career guidance while maintaining a consistent and controlled personality across all interactions.
+This project is a backend-only Node.js application that exposes an API for a personality-driven chatbot. The chatbot is designed to provide high-quality career guidance while exhibiting a unique and controlled personality in all responses.
 
-It integrates a free Large Language Model (LLM) using the Groq API and enforces strict behavioral rules through a structured system prompt.
+The system integrates a free Large Language Model (LLM) via the Groq API and enforces strict behavioral rules using a carefully engineered system prompt.
 
 ---
 
 ## Overview
 
-The chatbot follows a dual-behavior approach:
+The chatbot operates on a dual-behavior mechanism:
 
-- For career-related queries, it provides structured, intelligent, and actionable responses.
-- For non-career queries, it responds in a deliberately confused and humorous manner while remaining polite.
+- For **career-related queries**, it provides structured, intelligent, and actionable advice.
+- For **non-career queries**, it responds in a deliberately confused and humorous manner while remaining polite.
 
-It also includes rare dynamic behaviors such as Alien Mode and Elvish Mode to make interactions more engaging.
+Additionally, the chatbot includes rare dynamic behaviors such as "Alien Mode" and "Elvish Mode", making interactions more engaging and unpredictable.
 
 ---
 
-## Features
+## Key Features
 
-- Strict personality enforcement (emoji rule and pause formatting)
-- Context-aware responses using conversation memory
-- Dynamic behavior injection (alien and elvish modes)
-- Rate limiting to prevent API abuse
-- Clean and modular backend architecture
+### Strict Personality Enforcement
+
+- Every response begins with exactly one emoji
+- Uses `|||` to simulate natural pauses
+- Maintains consistent persona across all interactions
+
+### Context-Aware Responses
+
+- Retains short-term conversation memory (last 10 messages per user)
+- Enables more natural and continuous conversations
+
+### Dynamic Behavior Injection
+
+Occasionally switches to:
+
+- Alien-like language (briefly)
+- Elvish-style phrases (briefly)
+- Randomly references an ongoing fictional conflict between elves and aliens
+
+### Rate Limiting
+
+- Limits API usage to prevent abuse (100 requests per 15 minutes per client)
+
+### Modular Code Architecture
+
+- Clean separation of concerns (routes, services, memory, config)
 
 ---
 
 ## Tech Stack
 
-- Node.js
-- Express.js
-- Groq API
-- Axios
-- dotenv
+| Technology | Purpose               |
+|------------|-----------------------|
+| Node.js    | Runtime               |
+| Express.js | Web framework         |
+| Groq API   | LLM integration       |
+| Axios      | HTTP requests         |
+| dotenv     | Environment management|
 
 ---
 
@@ -58,21 +81,23 @@ It also includes rare dynamic behaviors such as Alien Mode and Elvish Mode to ma
 
 ---
 
-## Setup
+## Setup Instructions
 
-**Install dependencies:**
+### 1. Install Dependencies
 
 ```bash
 npm install
 ```
 
-**Create environment file:**
+### 2. Configure Environment Variables
+
+Create a `.env` file using the example:
 
 ```bash
 cp .env.example .env
 ```
 
-**Add the following variables:**
+Add your Groq API key:
 
 ```env
 GROQ_API_KEY=your_api_key_here
@@ -80,25 +105,29 @@ PORT=3000
 MODEL_NAME=llama-3.1-8b-instant
 ```
 
-**Run the server:**
+### 3. Run the Server
 
 ```bash
 npm start
 ```
 
-Server runs at `http://localhost:3000`
+Server will run on:
+
+```
+http://localhost:3000
+```
 
 ---
 
-## API
+## API Usage
 
-**Endpoint:**
+### Endpoint
 
 ```
 POST /api/chat
 ```
 
-**Request body:**
+### Request Body
 
 ```json
 {
@@ -107,7 +136,7 @@ POST /api/chat
 }
 ```
 
-**Response:**
+### Response
 
 ```json
 {
@@ -115,48 +144,64 @@ POST /api/chat
 }
 ```
 
+### Example cURL Request
+
+```bash
+curl -X POST http://localhost:3000/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{"userId": "demo_user", "message": "What is the capital of France?"}'
+```
+
 ---
 
-## System Prompt
+## System Prompt Design
 
-The chatbot behavior is controlled using a structured system prompt. It enforces formatting rules, switches intelligence based on topic, and introduces rare dynamic behaviors while maintaining consistency.
+The chatbot's behavior is controlled through a structured system prompt defined in `config/systemPrompt.js`.
+
+The prompt enforces:
+
+- Strict formatting rules (emoji + pauses)
+- Context-based intelligence switching
+- Rare randomized behaviors (alien/elvish modes)
+- Continuous character consistency
+
+This approach ensures predictable yet dynamic responses from the LLM while maintaining control over output quality.
 
 ---
 
 ## Memory Handling
 
-The system uses both short-term and long-term memory.
+The chatbot implements both short-term and long-term memory to maintain conversational context and improve user experience.
 
-**Short-term memory:**
+### Short-Term Memory
 
-- Stores up to 10 recent messages per user
-- Enables contextual continuity within a session
+Short-term memory is managed using an in-memory data structure that maps each `userId` to recent conversation history.
 
-**Long-term memory:**
+- Stores up to 10 most recent messages per user
+- Automatically removes older messages to control memory usage
+- Enables contextual continuity within a single session
 
-- Stored in a persistent JSON file
+### Long-Term Memory
+
+Long-term memory is implemented using a persistent `longTermMemory.json` file stored on disk.
+
 - Stores up to 50 messages per user
-- Maintains context across server restarts
+- Persists data across server restarts
+- Allows the chatbot to retain context beyond a single session
+
+### Memory Strategy
+
+- On each request, short-term memory is used for fast access and response generation
+- Long-term memory acts as a backup and persistence layer
+- Data is periodically trimmed to maintain performance and prevent excessive storage growth
 
 ---
 
 ## Future Improvements
 
-- Database integration (MongoDB or Redis)
+- Integration with MongoDB or Redis for scalable storage
 - Improved prompt tuning
 - Logging and monitoring
-- Cloud deployment
+- Deployment (Docker / Cloud)
 
 ---
-
-## Notes
-
-- Uses a free LLM API (Groq)
-- API keys are managed using environment variables
-- Designed for development and demonstration purposes
-
----
-
-## Author
-
-Developed as part of a backend engineering assignment focused on API design, prompt engineering, and conversational AI.
