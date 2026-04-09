@@ -1,101 +1,68 @@
----
-```
-# Personality-Driven Career Chatbot
+# 🤖 Personality-Driven Career Chatbot
 
-This project is a backend-only Node.js application that exposes an API for a personality-driven chatbot. The chatbot is designed to provide high-quality career guidance while exhibiting a unique and controlled personality in all responses.
-
-The system integrates a free Large Language Model (LLM) via the Groq API and enforces strict behavioral rules using a carefully engineered system prompt.
+A backend-only Node.js API for a personality-driven chatbot that delivers intelligent career guidance while maintaining a consistent, controlled personality across all interactions. Powered by the **Groq API** with a free LLM.
 
 ---
 
-## Overview
+## ✨ Features
 
-The chatbot operates on a dual-behavior mechanism:
-
-- For **career-related queries**, it provides structured, intelligent, and actionable advice.
-- For **non-career queries**, it responds in a deliberately confused and humorous manner while remaining polite.
-
-Additionally, the chatbot includes rare dynamic behaviors such as "Alien Mode" and "Elvish Mode", making interactions more engaging and unpredictable.
-
----
-
-## Key Features
-
-- **Strict Personality Enforcement**
-  - Every response begins with exactly one emoji
-  - Uses `|||` to simulate natural pauses
-  - Maintains consistent persona across all interactions
-  
-- **Context-Aware Responses**
-  - Retains short-term conversation memory (last 10 messages per user)
-  - Enables more natural and continuous conversations
-
-- **Dynamic Behavior Injection**
-  - Occasionally switches to:
-    - Alien-like language (briefly)
-    - Elvish-style phrases (briefly)
-  - Randomly references an ongoing fictional conflict between elves and aliens
-
-- **Rate Limiting**
-  - Limits API usage to prevent abuse (100 requests per 15 minutes per client)
-
-- **Modular Code Architecture**
-  - Clean separation of concerns (routes, services, memory, config)
+- **Dual-mode responses** — structured career advice for relevant queries; deliberately confused and humorous responses for off-topic ones
+- **Strict personality enforcement** — emoji rules and pause formatting (`|||`) baked into every reply
+- **Conversation memory** — short-term (session) and long-term (persistent) memory per user
+- **Dynamic behavior injection** — rare Alien Mode and Elvish Mode for engaging interactions
+- **Rate limiting** — prevents API abuse out of the box
+- **Modular architecture** — clean separation of config, memory, routes, and services
 
 ---
 
-## Tech Stack
+## 🛠 Tech Stack
 
-- Node.js
-- Express.js
-- Groq API (LLM Integration)
-- Axios (HTTP requests)
-- dotenv (environment management)
+| Layer | Technology |
+|---|---|
+| Runtime | Node.js |
+| Framework | Express.js |
+| LLM Provider | Groq API |
+| HTTP Client | Axios |
+| Config | dotenv |
 
 ---
-```
-## Project Structure
+
+## 📁 Project Structure
 
 ```
-
 .
 ├── config/
-│   └── systemPrompt.js
+│   └── systemPrompt.js      # Personality and behavior rules
 ├── memory/
-│   └── memoryStore.js
+│   └── memoryStore.js       # Short-term and long-term memory handling
 ├── routes/
-│   └── chat.js
+│   └── chat.js              # API route definitions
 ├── services/
-│   └── llm.js
-├── .env
-├── .env.example
+│   └── llm.js               # Groq API integration
+├── .env                     # Environment variables (not committed)
+├── .env.example             # Environment variable template
 ├── package.json
 ├── README.md
-└── server.js
-
+└── server.js                # Entry point
 ```
 
 ---
 
-## Setup Instructions
+## 🚀 Getting Started
 
-### 1. Install Dependencies
+### 1. Install dependencies
 
 ```bash
 npm install
-````
+```
 
----
-
-### 2. Configure Environment Variables
-
-Create a `.env` file using the example:
+### 2. Set up environment variables
 
 ```bash
 cp .env.example .env
 ```
 
-Add your Groq API key:
+Edit `.env` and fill in your values:
 
 ```env
 GROQ_API_KEY=your_api_key_here
@@ -103,33 +70,23 @@ PORT=3000
 MODEL_NAME=llama-3.1-8b-instant
 ```
 
----
-
-### 3. Run the Server
+### 3. Start the server
 
 ```bash
 npm start
 ```
 
-Server will run on:
-
-```
-http://localhost:3000
-```
+The server will be running at `http://localhost:3000`.
 
 ---
 
-## API Usage
+## 📡 API Reference
 
-### Endpoint
+### `POST /api/chat`
 
-```
-POST /api/chat
-```
+Send a message to the chatbot.
 
----
-
-### Request Body
+**Request Body**
 
 ```json
 {
@@ -138,9 +95,7 @@ POST /api/chat
 }
 ```
 
----
-
-### Response
+**Response**
 
 ```json
 {
@@ -148,67 +103,49 @@ POST /api/chat
 }
 ```
 
----
-
-### Example cURL Request
-
-```bash
-curl -X POST http://localhost:3000/api/chat \
--H "Content-Type: application/json" \
--d '{"userId": "demo_user", "message": "What is the capital of France?"}'
-```
+> **Note:** Responses use `|||` as a pause/separator and always include a relevant emoji, as enforced by the system prompt.
 
 ---
 
-## System Prompt Design
+## 🧠 Memory System
 
-The chatbot's behavior is controlled through a structured system prompt defined in `config/systemPrompt.js`.
+The chatbot maintains context across both sessions and server restarts.
 
-The prompt enforces:
-
-* Strict formatting rules (emoji + pauses)
-* Context-based intelligence switching
-* Rare randomized behaviors (alien/elvish modes)
-* Continuous character consistency
-
-This approach ensures predictable yet dynamic responses from the LLM while maintaining control over output quality.
+| Type | Storage | Limit |
+|---|---|---|
+| Short-term | In-memory | 10 messages per user |
+| Long-term | Persistent JSON file | 50 messages per user |
 
 ---
 
-## Memory Handling
+## 🎭 Personality Modes
 
-The chatbot implements both short-term and long-term memory to maintain conversational context and improve user experience.
-
-### Short-Term Memory
-
-Short-term memory is managed using an in-memory data structure that maps each `userId` to recent conversation history.
-
-- Stores up to 10 most recent messages per user
-- Automatically removes older messages to control memory usage
-- Enables contextual continuity within a single session
-
-### Long-Term Memory
-
-Long-term memory is implemented using a persistent `longTermMemory.json` file stored on disk.
-
-- Stores up to 50 messages per user
-- Persists data across server restarts
-- Allows the chatbot to retain context beyond a single session
-
-### Memory Strategy
-
-- On each request, short-term memory is used for fast access and response generation
-- Long-term memory acts as a backup and persistence layer
-- Data is periodically trimmed to maintain performance and prevent excessive storage growth
----
-
-## Future Improvements
-
-* Integration with MongoDB or Redis for scalable storage
-* Improved prompt tuning
-* Logging and monitoring
-* Deployment (Docker / Cloud)
+| Mode | Trigger | Behavior |
+|---|---|---|
+| Career Mode | Career-related queries | Structured, actionable, intelligent guidance |
+| Confused Mode | Off-topic queries | Politely puzzled and humorous |
+| 👽 Alien Mode | Rare / random | Responds as if from another planet |
+| 🧝 Elvish Mode | Rare / random | Responds with Tolkien-esque language |
 
 ---
 
+## 🔮 Roadmap
 
+- [ ] Database integration (MongoDB or Redis)
+- [ ] Improved prompt tuning and persona depth
+- [ ] Logging and monitoring (Winston / Datadog)
+- [ ] Cloud deployment (Railway / Render / AWS)
+
+---
+
+## ⚠️ Notes
+
+- Uses a **free-tier LLM** via the Groq API — no paid OpenAI subscription required
+- All API keys are managed through environment variables and never hardcoded
+- Designed for development and demonstration purposes
+
+---
+
+## 👤 Author
+
+Developed as part of a backend engineering assignment focused on API design, prompt engineering, and conversational AI.
