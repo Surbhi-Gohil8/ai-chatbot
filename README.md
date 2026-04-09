@@ -1,68 +1,78 @@
-# 🤖 Personality-Driven Career Chatbot
+# Personality-Driven Career Chatbot
 
-A backend-only Node.js API for a personality-driven chatbot that delivers intelligent career guidance while maintaining a consistent, controlled personality across all interactions. Powered by the **Groq API** with a free LLM.
+This project is a backend-only Node.js application that provides an API for a personality-driven chatbot. The chatbot delivers high-quality career guidance while maintaining a consistent and controlled personality across all interactions.
 
----
-
-## ✨ Features
-
-- **Dual-mode responses** — structured career advice for relevant queries; deliberately confused and humorous responses for off-topic ones
-- **Strict personality enforcement** — emoji rules and pause formatting (`|||`) baked into every reply
-- **Conversation memory** — short-term (session) and long-term (persistent) memory per user
-- **Dynamic behavior injection** — rare Alien Mode and Elvish Mode for engaging interactions
-- **Rate limiting** — prevents API abuse out of the box
-- **Modular architecture** — clean separation of config, memory, routes, and services
+It integrates a free Large Language Model (LLM) using the Groq API and enforces strict behavioral rules through a structured system prompt.
 
 ---
 
-## 🛠 Tech Stack
+## Overview
 
-| Layer | Technology |
-|---|---|
-| Runtime | Node.js |
-| Framework | Express.js |
-| LLM Provider | Groq API |
-| HTTP Client | Axios |
-| Config | dotenv |
+The chatbot follows a dual-behavior approach:
+
+- For career-related queries, it provides structured, intelligent, and actionable responses.
+- For non-career queries, it responds in a deliberately confused and humorous manner while remaining polite.
+
+It also includes rare dynamic behaviors such as Alien Mode and Elvish Mode to make interactions more engaging.
 
 ---
 
-## 📁 Project Structure
+## Features
+
+- Strict personality enforcement (emoji rule and pause formatting)
+- Context-aware responses using conversation memory
+- Dynamic behavior injection (alien and elvish modes)
+- Rate limiting to prevent API abuse
+- Clean and modular backend architecture
+
+---
+
+## Tech Stack
+
+- Node.js
+- Express.js
+- Groq API
+- Axios
+- dotenv
+
+---
+
+## Project Structure
 
 ```
 .
 ├── config/
-│   └── systemPrompt.js      # Personality and behavior rules
+│   └── systemPrompt.js
 ├── memory/
-│   └── memoryStore.js       # Short-term and long-term memory handling
+│   └── memoryStore.js
 ├── routes/
-│   └── chat.js              # API route definitions
+│   └── chat.js
 ├── services/
-│   └── llm.js               # Groq API integration
-├── .env                     # Environment variables (not committed)
-├── .env.example             # Environment variable template
+│   └── llm.js
+├── .env
+├── .env.example
 ├── package.json
 ├── README.md
-└── server.js                # Entry point
+└── server.js
 ```
 
 ---
 
-## 🚀 Getting Started
+## Setup
 
-### 1. Install dependencies
+**Install dependencies:**
 
 ```bash
 npm install
 ```
 
-### 2. Set up environment variables
+**Create environment file:**
 
 ```bash
 cp .env.example .env
 ```
 
-Edit `.env` and fill in your values:
+**Add the following variables:**
 
 ```env
 GROQ_API_KEY=your_api_key_here
@@ -70,23 +80,25 @@ PORT=3000
 MODEL_NAME=llama-3.1-8b-instant
 ```
 
-### 3. Start the server
+**Run the server:**
 
 ```bash
 npm start
 ```
 
-The server will be running at `http://localhost:3000`.
+Server runs at `http://localhost:3000`
 
 ---
 
-## 📡 API Reference
+## API
 
-### `POST /api/chat`
+**Endpoint:**
 
-Send a message to the chatbot.
+```
+POST /api/chat
+```
 
-**Request Body**
+**Request body:**
 
 ```json
 {
@@ -95,7 +107,7 @@ Send a message to the chatbot.
 }
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
@@ -103,49 +115,48 @@ Send a message to the chatbot.
 }
 ```
 
-> **Note:** Responses use `|||` as a pause/separator and always include a relevant emoji, as enforced by the system prompt.
+---
+
+## System Prompt
+
+The chatbot behavior is controlled using a structured system prompt. It enforces formatting rules, switches intelligence based on topic, and introduces rare dynamic behaviors while maintaining consistency.
 
 ---
 
-## 🧠 Memory System
+## Memory Handling
 
-The chatbot maintains context across both sessions and server restarts.
+The system uses both short-term and long-term memory.
 
-| Type | Storage | Limit |
-|---|---|---|
-| Short-term | In-memory | 10 messages per user |
-| Long-term | Persistent JSON file | 50 messages per user |
+**Short-term memory:**
 
----
+- Stores up to 10 recent messages per user
+- Enables contextual continuity within a session
 
-## 🎭 Personality Modes
+**Long-term memory:**
 
-| Mode | Trigger | Behavior |
-|---|---|---|
-| Career Mode | Career-related queries | Structured, actionable, intelligent guidance |
-| Confused Mode | Off-topic queries | Politely puzzled and humorous |
-| 👽 Alien Mode | Rare / random | Responds as if from another planet |
-| 🧝 Elvish Mode | Rare / random | Responds with Tolkien-esque language |
+- Stored in a persistent JSON file
+- Stores up to 50 messages per user
+- Maintains context across server restarts
 
 ---
 
-## 🔮 Roadmap
+## Future Improvements
 
-- [ ] Database integration (MongoDB or Redis)
-- [ ] Improved prompt tuning and persona depth
-- [ ] Logging and monitoring (Winston / Datadog)
-- [ ] Cloud deployment (Railway / Render / AWS)
+- Database integration (MongoDB or Redis)
+- Improved prompt tuning
+- Logging and monitoring
+- Cloud deployment
 
 ---
 
-## ⚠️ Notes
+## Notes
 
-- Uses a **free-tier LLM** via the Groq API — no paid OpenAI subscription required
-- All API keys are managed through environment variables and never hardcoded
+- Uses a free LLM API (Groq)
+- API keys are managed using environment variables
 - Designed for development and demonstration purposes
 
 ---
 
-## 👤 Author
+## Author
 
 Developed as part of a backend engineering assignment focused on API design, prompt engineering, and conversational AI.
