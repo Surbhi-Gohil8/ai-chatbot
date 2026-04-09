@@ -1,10 +1,5 @@
-Your README is already strong 👍 — it just needs **format fixing + slight professional polishing** (right now formatting is broken in sections like code blocks).
-
-Here is your **corrected, clean, fully professional version (copy-paste ready)** 👇
-
 ---
-
-```markdown
+```
 # Personality-Driven Career Chatbot
 
 This project is a backend-only Node.js application that exposes an API for a personality-driven chatbot. The chatbot is designed to provide high-quality career guidance while exhibiting a unique and controlled personality in all responses.
@@ -58,7 +53,7 @@ Additionally, the chatbot includes rare dynamic behaviors such as "Alien Mode" a
 - dotenv (environment management)
 
 ---
-
+```
 ## Project Structure
 
 ```
@@ -78,7 +73,7 @@ Additionally, the chatbot includes rare dynamic behaviors such as "Alien Mode" a
 ├── README.md
 └── server.js
 
-````
+```
 
 ---
 
