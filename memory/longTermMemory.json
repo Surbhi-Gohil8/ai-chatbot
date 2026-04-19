@@ -39,6 +39,208 @@
     {
       "role": "assistant",
       "content": "🌬️\nBlue... no, wait, is it more like... azure? ||| Or maybe it's a lovely shade of cerulean? *scratches digital head*"
+    },
+    {
+      "role": "user",
+      "content": "Can you help me prepare for a frontend developer interview? "
+    },
+    {
+      "role": "assistant",
+      "content": "💼\n Ah, an interview, you say? ||| Well, let's prepare you for the battlefield, shall we?\n\nTo ace a frontend developer interview, you'll want to focus on the following areas:\n\n* HTML, CSS, and JavaScript fundamentals\n* Frontend frameworks like React, Angular, or Vue.js\n* State management and libraries like Redux or MobX\n* Component-based architecture and design patterns\n* Rendering and optimization techniques\n* Accessibility and best practices\n\nHere's a structured approach to help you prepare:\n\n**Section 1: Fundamentals**\n\n* HTML: Understand the structure, semantics, and accessibility features\n* CSS: Know the box model, flexbox, grid, selectors, and animations\n* JavaScript: Master the basics, including variables, data types, functions, and closures\n\n**Section 2: Frontend Frameworks**\n\n* Choose one framework and master its core concepts\n* Understand the component lifecycle, props, state, and events\n* Familiarize yourself with the framework's ecosystem and tooling\n\n**Section 3: State Management**\n\n* Learn about Redux, MobX, or other state management libraries\n* Understand the concept of state management and its benefits\n* Practice implementing state management in a real-world project\n\n**Section 4: Component-Based Architecture**\n\n* Learn about design patterns, such as the MVP or MVVM\n* Understand how to break down complex components into smaller ones\n* Practice implementing component-based architecture in a real-world project\n\n**Section 5: Rendering and Optimization**\n\n* Learn about rendering techniques, such as virtual DOM and reconciliation\n* Understand how to optimize component rendering and reduce DOM mutations\n* Practice implementing rendering and optimization techniques in a real-world project\n\n**Section 6: Accessibility and Best Practices**\n\n* Learn about accessibility features and best practices\n* Understand how to create accessible components and interfaces\n* Practice implementing accessibility and best practices in a real-world project\n\n**Practice and Review**\n\n* Practice coding challenges and projects on platforms like LeetCode, HackerRank, or CodeWars\n* Review and practice coding exercises on popular frontend developer resources\n* Join online communities and forums to stay updated on industry trends and best practices"
+    },
+    {
+      "role": "user",
+      "content": "tell me about more about review and practive coding exercises from previous answer "
+    },
+    {
+      "role": "assistant",
+      "content": "📝\nAh, review and practice coding exercises, the keys to mastery ||| Here's a deeper dive into the resources and tips to help you level up your frontend development skills:\n\n**Popular Coding Exercise Platforms:**\n\n* **LeetCode:** Offers a vast collection of coding challenges, including frontend-focused problems\n* **HackerRank:** Features coding challenges in a variety of domains, including web development and algorithms\n* **CodeWars:** Provides coding challenges and katas in the form of martial arts-inspired coding \"dojos\"\n* **CodinGame:** A platform that teaches programming concepts through game development\n* **FreeCodeCamp:** A non-profit organization offering a comprehensive curriculum and coding challenges in web development\n\n**Frontend-Focused Coding Challenges:**\n\n* **Build a simple todo list app:** A classic exercise that tests your understanding of HTML, CSS, and JavaScript\n* **Implement a responsive layout:** Challenge yourself to create a layout that adapts to different screen sizes and devices\n* **Create a custom dropdown menu:** Practice using CSS and JavaScript to create a custom dropdown menu\n* **Implement a search functionality:** Test your understanding of JavaScript and DOM manipulation by creating a search feature\n* **Build a simple game:** Create a small game using HTML, CSS, and JavaScript to practice your skills\n\n**Tips for Review and Practice:**\n\n* **Start with the basics:** Begin with fundamental exercises and build your way up to more complex challenges\n* **Focus on one area:** Concentrate on a specific area, such as state management or component-based architecture\n* **Use a timer:** Set a timer for a specific amount of time and challenge yourself to complete as many exercises as possible\n* **Join online communities:** Participate in online forums and communities to discuss coding exercises and get feedback from others\n* **Review and reflect:** Regularly review your progress and reflect on what you've learned to improve your skills\n\n**Real-World Projects:**\n\n* **Personal projects:** Build projects that you're passionate about, such as a personal website or a hobby-related app\n* **Open-source contributions:** Contribute to open-source projects on GitHub or other platforms to practice your skills and gain experience\n* **Client projects:** Take on small client projects to gain hands-on experience and build your portfolio\n* **Bug fixes and optimizations:** Volunteer to fix bugs or optimize existing code in open-source projects or your own codebase\n* **Create a portfolio:** Showcase your projects and skills in a professional portfolio to demonstrate your expertise to potential employers"
+    },
+    {
+      "role": "user",
+      "content": "tell me about more about client projects on previous conversation "
+    },
+    {
+      "role": "assistant",
+      "content": "📈\nAh, client projects, the ultimate way to put your skills to the test ||| Here's a deeper dive into the world of client projects and how they can benefit you:\n\n**What are Client Projects?**\n\n* **Small-scale projects:** Client projects refer to small-scale web development projects that you take on for a client, typically a business or individual\n* **Real-world experience:** Client projects provide you with real-world experience, allowing you to apply your skills to actual problems and challenges\n* **Portfolio-building:** Client projects are a great way to build your portfolio, showcasing your skills and experience to potential employers\n\n**Benefits of Client Projects:**\n\n* **Hands-on experience:** Client projects give you hands-on experience with real-world problems and challenges\n* **Skill development:** Client projects help you develop a wide range of skills, from design and development to project management and communication\n* **Networking opportunities:** Client projects provide you with opportunities to network with potential clients, partners, and collaborators\n* **Portfolio growth:** Client projects help you build a strong portfolio, showcasing your skills and experience to potential employers\n* **Financial rewards:** Client projects can provide you with financial rewards, helping you to gain financial stability and independence\n\n**Types of Client Projects:**\n\n* **Web development:** Client projects can involve web development, including building websites, web applications, and mobile applications\n* **E-commerce development:** Client projects can involve e-commerce development, including building online stores and managing inventory\n* **Content management systems:** Client projects can involve building content management systems, including WordPress and other platforms\n* **Custom applications:** Client projects can involve building custom applications, including desktop and mobile applications\n* **Database management:** Client projects can involve database management, including designing and implementing databases\n\n**How to Find Client Projects:**\n\n* **Freelance platforms:** Use freelance platforms like Upwork, Fiverr, and Freelancer to find client projects\n* **Personal network:** Leverage your personal network, including friends, family, and colleagues, to find client projects\n* **Online communities:** Join online communities, including Reddit and Stack Overflow, to find client projects\n* **Local businesses:** Reach out to local businesses and offer your services to find client projects\n* **Online marketplaces:** Use online marketplaces like Toptal and Gun.io to find client projects\n\n**Tips for Working with Clients:**\n\n* **Clear communication:** Establish clear communication channels with your client to ensure you understand their needs and requirements\n* **Project planning:** Create a project plan and timeline to ensure you stay on track and deliver high-quality results\n* **Time management:** Effectively manage your time to meet client deadlines and deliver results on time\n* **Budgeting:** Establish a budget and stick to it to avoid scope creep and ensure client satisfaction\n* **Continuous improvement:** Continuously seek feedback from clients and improve your skills and services to deliver high-quality results"
+    },
+    {
+      "role": "user",
+      "content": "tell me about more about client projects on previous conversation "
+    },
+    {
+      "role": "assistant",
+      "content": "📈\nAh, client projects, the ultimate way to put your skills to the test ||| Let's dive deeper into the world of client projects and explore some real-world examples.\n\n**Real-World Examples of Client Projects:**\n\n* **E-commerce website for a small business:** A client comes to you with a small e-commerce website that needs to be built from scratch. They want a website that can handle online transactions, manage inventory, and provide a seamless user experience.\n* **Custom web application for a non-profit:** A non-profit organization approaches you with a unique web application that needs to be built. They want an application that can track donations, manage volunteers, and provide a dashboard for administrators.\n* **Blogging platform for a content creator:** A content creator comes to you with a requirement to build a blogging platform that can handle large volumes of traffic, manage comments, and provide a user-friendly interface for authors.\n* **Mobile application for a restaurant:** A restaurant owner approaches you with a requirement to build a mobile application that can allow customers to order food online, manage orders, and provide real-time updates.\n* **Website redesign for a large corporation:** A large corporation comes to you with a requirement to redesign their website, which needs to be more user-friendly, responsive, and provide a better user experience.\n\n**Client Project Case Studies:**\n\n* **Case Study 1:** You're hired by a small business to build an e-commerce website that can handle online transactions, manage"
+    },
+    {
+      "role": "user",
+      "content": "tell me about more about client projects on previous conversation "
+    },
+    {
+      "role": "assistant",
+      "content": "📈\nAh, client projects, the ultimate way to put your skills to the test ||| Let's dive deeper into the world of client projects and explore some advanced concepts.\n\n**Advanced Client Project Concepts:**\n\n* **Scope Creep:** A client project can quickly get out of hand if the scope of the project is not defined clearly. Scope creep occurs when the client adds new features or requirements to the project that were not originally agreed upon.\n* **Risk Management:** Every client project carries risks, such as delays, budget overruns, or scope changes. A good client project manager should be able to identify and mitigate these risks.\n* **Agile Methodologies:** Agile methodologies, such as Scrum and Kanban, are popular frameworks for managing client projects. They emphasize flexibility, collaboration, and continuous improvement.\n* **Project Management Tools:** There are many project management tools available, such as Asana, Trello, and Basecamp, that can help you manage client projects more effectively.\n* **Client Communication:** Effective communication is key to a successful client project. You should be able to communicate clearly and regularly with your client to ensure that everyone is on the same page.\n\n**Advanced Client Project Tips:**\n\n* **Clearly Define the Scope:** Make sure to clearly define the scope of the project with your client to avoid scope creep.\n* **Establish a Regular Communication Schedule:** Establish a regular communication schedule with your client to ensure that you're both on the same page.\n* **Use"
+    },
+    {
+      "role": "user",
+      "content": "GIVE ME COLOR OF PINEAPPLE"
+    },
+    {
+      "role": "assistant",
+      "content": "🍍\nUh, the color of a pineapple... is... yellow? ||| No, wait, it's more like a vibrant green on the outside and a yellowish-green on the inside."
+    },
+    {
+      "role": "user",
+      "content": "GIVE ME COLOR OF PINEAPPLE"
+    },
+    {
+      "role": "assistant",
+      "content": "🌴\nZhilak pizzle klorp ||| (Alien Mode: Color of pineapple is yellow-green)"
+    },
+    {
+      "role": "user",
+      "content": "tell me about more about client projects on previous conversation "
+    },
+    {
+      "role": "assistant",
+      "content": "💼\nAh, client projects, the ultimate way to put your skills to the test ||| Let's dive deeper into the world of client projects and explore some advanced concepts.\n\n**Advanced Client Project Concepts:**\n\n* **Project Estimation:** Accurately estimating the time and resources required for a project is crucial to delivering it on time and within budget.\n* **Project Risk Management:** Identifying and mitigating risks associated with a project can help ensure its successful completion.\n* **Agile Methodologies:** Agile methodologies, such as Scrum and Kanban, are popular frameworks for managing client projects.\n* **Project Management Tools:** There are many project management tools available that can help you manage client projects more effectively.\n* **Client Communication:** Effective communication is key to a successful client project.\n\n**Advanced Client Project Tips:**\n\n* **Clearly Define the Scope:** Make sure to clearly define the scope of the project with your client to avoid scope creep.\n* **Establish a Regular Communication Schedule:** Establish a regular communication schedule with your client to ensure that you're both on the same page.\n* **Use Project Management Tools:** Utilize project management tools to help you stay organized and on track.\n\n**Best Practices for Client Projects:**\n\n* **Meet with the Client Regularly:** Regular meetings with the client can help ensure that everyone is on the same page.\n* **Keep the Client Informed:** Keep the client informed of progress, issues, and changes to the project.\n* **Deliver High"
+    },
+    {
+      "role": "user",
+      "content": "CAN YOU BRIFLY TELL ME ABOUT AEROSPACE ENGINEERING"
+    },
+    {
+      "role": "assistant",
+      "content": "🚀\nQuel re, mellon ||| (Elvish Mode: Briefly, aerospace engineering is the discipline that deals with the design, development, and operation of aircraft, spacecraft, and missiles. It involves the application of mathematical and scientific principles to create efficient, safe, and reliable systems that can withstand the stresses of flight and space travel.)"
+    },
+    {
+      "role": "user",
+      "content": "CAN YOU BRIFLY TELL ME ABOUT AEROSPACE ENGINEERING"
+    },
+    {
+      "role": "assistant",
+      "content": "🚀\nAerospace engineering is the study and application of the principles of engineering and physics to the design, development, and operation of aircraft, spacecraft, and missiles. It involves a multidisciplinary approach, incorporating aspects of mechanical, electrical, computer, and materials engineering, as well as physics and mathematics. Aerospace engineers design and develop systems, such as propulsion, structural, and control systems, to ensure the safety, efficiency, and performance of vehicles in flight and space."
+    },
+    {
+      "role": "user",
+      "content": "CAN YOU  TELL ME ABOUT AEROSPACE ENGINEERING"
+    },
+    {
+      "role": "assistant",
+      "content": "🚀\nAh, aerospace engineering, a field that's out of this world ||| Let's dive deeper and explore the wonders of aerospace engineering!\n\n**What is Aerospace Engineering?**\n\nAerospace engineering is the study and application of the principles of engineering and physics to the design, development, and operation of aircraft, spacecraft, and missiles. It involves a multidisciplinary approach, incorporating aspects of mechanical, electrical, computer, and materials engineering, as well as physics and mathematics.\n\n**Sub"
+    },
+    {
+      "role": "user",
+      "content": "CAN YOU  TELL ME ABOUT AEROSPACE ENGINEERING in short"
+    },
+    {
+      "role": "assistant",
+      "content": "🚀\nAerospace engineering is the study of designing, building, and operating aircraft, spacecraft, and missiles. It combines principles of mechanics, materials, and physics to create efficient, safe, and reliable systems for flight and space travel."
+    },
+    {
+      "role": "user",
+      "content": "CAN YOU briefly TELL ME ABOUT AEROSPACE ENGINEERING "
+    },
+    {
+      "role": "assistant",
+      "content": "🚀\nAerospace engineering is the study of designing and building aircraft, spacecraft, and missiles. It involves applying physics, math, and engineering principles to create efficient, safe, and reliable systems for flight and space travel."
+    },
+    {
+      "role": "user",
+      "content": "CAN YOU briefly TELL ME ABOUT AEROSPACE ENGINEERING "
+    },
+    {
+      "role": "assistant",
+      "content": "🚀\nAerospace engineering: designing & building aircraft, spacecraft & missiles using physics, math & engineering principles."
+    },
+    {
+      "role": "user",
+      "content": "Can you help me prepare for a frontend developer interview? "
+    },
+    {
+      "role": "assistant",
+      "content": "💼\nAh, an interview, you say? ||| Well, let's prepare you for the battlefield, shall we?\n\nTo ace a frontend developer interview, you'll want to focus on the following areas:\n\n* HTML, CSS, and JavaScript fundamentals\n* Frontend frameworks like React, Angular, or Vue.js\n* State management and libraries like Redux or MobX\n* Component-based architecture and design patterns\n* Rendering and optimization techniques\n* Accessibility and best practices\n\nHere's a structured"
+    },
+    {
+      "role": "user",
+      "content": "Can you help me prepare for a frontend developer interview? ||| I'm particularly nervous about the coding challenges. ||| Any tips or resources you can recommend?"
+    },
+    {
+      "role": "assistant",
+      "content": "🤔\nCoding challenges, huh? ||| Don't worry, I've got you covered!\n\n**Tips for Acing Coding Challenges:**\n\n* **Practice, practice, practice:** The more you practice, the more comfortable you'll become with coding under time pressure.\n* **Focus on the problem:** Read the problem statement carefully and focus on understanding what's being asked.\n* **Break it down:** Break down the problem into smaller, manageable parts.\n* **Use a systematic approach:** Use"
+    },
+    {
+      "role": "user",
+      "content": "Can you help me prepare for a frontend developer interview? in depth "
+    },
+    {
+      "role": "assistant",
+      "content": "💼\nAh, an in-depth preparation, you say? ||| Well, let's dive deep into the world of frontend development and prepare you for the ultimate interview challenge!\n\n**Frontend Development Fundamentals:**\n\n* **HTML:** Understand the structure, semantics, and accessibility features of HTML5.\n* **CSS:** Know the box model, flexbox, grid, selectors, and animations.\n* **JavaScript:** Master the basics, including variables, data types, functions, and closures.\n*"
+    }
+  ],
+  "user_12": [
+    {
+      "role": "user",
+      "content": "Can you help me prepare for a frontend developer interview? in depth "
+    },
+    {
+      "role": "assistant",
+      "content": "🤔💻 Ahah, Frontend Dev interview prep ||| sounds like a mammoth task, but don't worry, I'm here to break it down for you 📝.\n\n**Before we dive in**\n\nTo give you the best advice, can you tell me a bit about your background? 🤔\n- What programming languages have you worked with?\n- Have you built any personal projects or contributed to open-source projects?\n- What type of frontend development are you interested in"
+    },
+    {
+      "role": "user",
+      "content": "Can you help me prepare for a frontend developer interview? in 1000 words "
+    },
+    {
+      "role": "assistant",
+      "content": "🤔💻 Ahah, Frontend Dev interview prep ||| sounds like a mammoth task, but don't worry, I'm here to break it down for you 📝.\n\n**Frontend Developer Interview Structure**\n\nLet's assume that the interview will cover the following topics:\n\n1. **Fundamentals**: HTML, CSS, JavaScript basics\n2. **Frontend Frameworks**: Familiarity with React, Angular, or Vue.js\n3. **State Management**: Understanding of"
+    },
+    {
+      "role": "user",
+      "content": "Can you help me prepare for a frontend developer interview? in 1000 words "
+    },
+    {
+      "role": "assistant",
+      "content": "🤔💻 Ahah, Frontend Dev interview prep ||| sounds like a mammoth task, but don't worry, I'm here to break it down for you 📝.\n\n**Frontend Developer Interview Structure**\n\nLet's assume that the interview will cover the following topics:\n\n1. **Fundamentals**: HTML, CSS, JavaScript basics\n2. **Frontend Frameworks**: Familiarity with React, Angular, or Vue.js\n3. **State Management**: Understanding of Redux, MobX, or other state management libraries\n4. **Component-Based Architecture**: Ability to design and build reusable components\n5. **Routing and Navigation**: Familiarity with React Router, Angular Router, or Vue Router\n6. **API Integration**: Understanding of how to make API calls and handle data\n7. **Error Handling and Debugging**: Ability to identify and fix common errors\n8. **Code Optimization and Performance**: Knowledge of how to optimize code for better performance\n9. **Security**: Understanding of common security risks and how to prevent them\n10. **Soft Skills**: Communication, teamwork, and problem-solving skills\n\n**Section 1: Fundamentals**\n\nIn this section, you can expect to be asked questions about HTML, CSS, and JavaScript basics. Here are some topics to review:\n\n* HTML:\n + Structure and semantics\n + Elements and attributes\n + Forms and input types\n* CSS:\n + Selectors and specificity\n + Box model and layout\n + CSS preprocessors like Sass or Less\n* JavaScript:\n + Variables and data types\n + Functions and closures\n + DOM manipulation and event handling\n\n**Section 2: Frontend Frameworks**\n\nIn this section, you can expect to be asked questions about your experience with React, Angular, or Vue.js. Here are some topics to review:\n\n* React:\n + Components and props\n + State and lifecycle methods\n + Hooks and context\n* Angular:\n + Components and services\n + Templates and directives\n + Dependency injection and services\n* Vue.js:\n + Components and slots\n + State and computed properties\n + Lifecycle hooks and watchers\n\n**Section 3: State Management**\n\nIn this section, you can expect to be asked questions about your understanding of state management libraries like Redux, MobX, or Vuex. Here are some topics to review:\n\n* Redux:\n + Store and actions\n + Reducers and middleware\n + Connected components and selectors\n* MobX:\n + Observables and reactions\n + Computed properties and getters\n + Action and reaction chains\n* Vuex:\n + Store and getters\n + Actions and mutations\n + Computed properties and state\n\n**Section 4: Component-Based Architecture**\n\nIn this section, you can expect to be asked questions about your ability to design and build reusable components. Here are some topics to review:\n\n* Component structure and organization\n* Props and state passing\n* Lifecycle methods and hooks\n* Reusability and modularity\n\n**Section 5: Routing and Navigation**\n\nIn this section, you can expect to be asked questions about your familiarity with routing and navigation libraries like React Router, Angular Router, or Vue Router. Here are some topics to review:\n\n* Routing and navigation basics\n* Route components and children\n* Route params and query params\n* Navigation and history management\n\n**Section 6: API Integration**\n\nIn this section, you can expect to be asked questions about your understanding of how to make API calls and handle data. Here are some topics to review:\n\n* API basics and HTTP requests\n* Data formats and serialization\n* API authentication and authorization\n* Error handling and debugging\n\n**Section 7: Error Handling and Debugging**\n\nIn this section, you can expect to be asked questions about your ability to identify and fix common errors. Here are some topics to review:\n\n* Browser console and DevTools\n* Error messages and stack traces\n* Debugging techniques and tools\n* Error handling and logging\n\n**Section 8: Code Optimization and Performance**\n\nIn this section, you can expect to be asked questions about your knowledge of how to optimize code for better performance. Here are some topics to review:\n\n* Code optimization techniques\n* Performance metrics and tools\n* Browser caching and storage\n* Code splitting and lazy loading\n\n**Section 9: Security**\n\nIn this section, you can expect to be asked questions about your understanding of common security risks and how to prevent them. Here are some topics to review:\n\n* Cross-site scripting (XSS) and cross-site request forgery (CSRF)\n* SQL injection and NoSQL injection\n* Password storage and authentication\n* Data encryption and secure protocols\n\n**Section 10: Soft Skills**\n\nIn this section, you can expect to be asked questions about your communication, teamwork, and problem-solving skills. Here are some topics to review:\n\n* Communication and collaboration\n* Teamwork and project management\n* Problem-solving and debugging\n* Adaptability and continuous learning\n\n**Tips and Tricks**\n\nHere are some tips and tricks to help you prepare for the interview:\n\n* Practice coding challenges"
+    },
+    {
+      "role": "user",
+      "content": "Can you help me prepare for a frontend developer interview? in 20 words "
+    },
+    {
+      "role": "assistant",
+      "content": "🤔💻 Prepare for frontend interviews by reviewing HTML, CSS, JavaScript, frameworks, state management, and common coding challenges 💻👍"
+    },
+    {
+      "role": "user",
+      "content": "GIVE ME COLOR OF PINEAPPLE"
+    },
+    {
+      "role": "assistant",
+      "content": "🍍 The color of a pineapple is typically yellow 🟨. But did you know that pineapples can also have a reddish-brown or golden-yellow color depending on the ripeness and variety? 🤓"
+    },
+    {
+      "role": "user",
+      "content": "GIVE ME COLOR OF PINEAPPLE"
+    },
+    {
+      "role": "assistant",
+      "content": "🍍 The color of a pineapple is typically 🟨 **YELLOW** 🟨!"
+    },
+    {
+      "role": "user",
+      "content": "CAN YOU BRIFLY TELL ME ABOUT AEROSPACE ENGINEERING"
+    },
+    {
+      "role": "assistant",
+      "content": "🚀 **Aerospace Engineering** is the application of engineering principles to the design, development, and operation of aircraft, spacecraft, and missiles 🚀. \n\nKey areas of focus:\n\n ✈️ **Aerodynamics**: Study of air and gas dynamics to design efficient aircraft shapes and systems.\n 🛰️ **Propulsion**: Development of engines and propulsion systems for aircraft and spacecraft.\n 🚀 **Structures**: Design of lightweight, strong materials for aircraft and spacecraft structures.\n 💻 **Control Systems**: Development of control systems for aircraft and spacecraft stability and navigation.\n\nSome of the most exciting aerospace engineering projects include:\n\n 🚀 **Space Exploration**: Designing spacecraft for interplanetary missions.\n ✈️ **Commercial Aviation**: Developing more efficient aircraft for commercial flights.\n 🚀 **Reusability**: Creating reusable rockets and spacecraft.\n\nAre you interested in learning more? 🤔"
+    },
+    {
+      "role": "user",
+      "content": "CAN YOU TELL ME ABOUT AEROSPACE ENGINEERING in short"
+    },
+    {
+      "role": "assistant",
+      "content": "🚀 **Aerospace Engineering** is the study and application of engineering principles to design, develop, and operate:\n\n ✈️ Aircraft (commercial, military, and private)\n 🛰️ Spacecraft (satellites, interplanetary missions)\n 🚀 Missiles (guided and unguided)\n\nFocus areas:\n\n 🚀 Aerodynamics\n 🚀 Propulsion\n 🚀 Structures\n 💻 Control Systems"
     }
   ]
 }
